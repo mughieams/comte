@@ -8,11 +8,15 @@
     }
 }
 
+main {
+    max-width: 750px;
+}
+
 main,
 footer>.footer_wrap,
 .nav-container {
   margin: 0 auto;
-  max-width: 750px;
+//   max-width: 750px;
   width: 80%;
     @media (max-width: $break-small) {
         width: 88%;
@@ -74,10 +78,10 @@ footer>.footer_wrap,
 footer {
     font-family: $source;
     padding: 16px 0 26px 0;
-    background-color: $grey-3;
+    background-color: $white;
     color: $default-tint;
-    border-top: 1px solid $grey-2;
-    border-bottom: 1px solid $grey-2;
+    // border-top: 1px solid $grey-2;
+    // border-bottom: 1px solid $grey-2;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -87,7 +91,11 @@ footer {
         position: relative;
 
         .information {
-            display: inline-block;
+            float: right;
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+            // display: inline-block;
 
             .myname {
                 font-size: 20px;
@@ -117,11 +125,13 @@ footer {
                 }
             }
         }
+
         .copyright {
-            float: right;
-            position: absolute;
-            right: 0;
-            bottom: 2px;
+            // float: right;
+            // position: absolute;
+            // right: 0;
+            // bottom: 2px;
+            display: inline-block;
 
             @media (max-width: $break-small) {
                 float: none;
