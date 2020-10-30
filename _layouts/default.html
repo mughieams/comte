@@ -7,16 +7,15 @@
 
   {% include navigation.html %}
 
-  {% if page.header.enabled %}
-  {% case page.header.category %}
-  {% when 'post' %}
-  {% include post-header.html %}
-  {% when 'page' %}
-  {% include page-header.html %}
-  {% endcase %}
-  {% endif %}
-
   <main>
+    {% if page.header.enabled %}
+    {% case page.header.category %}
+    {% when 'post' %}
+    {% include post-header.html %}
+    {% when 'page' %}
+    {% include page-header.html %}
+    {% endcase %}
+    {% endif %}
     {{ content }}
   </main>
 
